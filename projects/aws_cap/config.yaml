@@ -1,0 +1,24 @@
+Model:
+    CharSet: [' ', k, r, b, y, '5', c, h, m, '3', w, W, B, H, n, '1', i, t, X, '2',
+        f, s, d, '4', '8', u, g, a, z, p, e, C, x, '7', '6', o]
+    ImageChannel: 1
+    ImageHeight: 64
+    ImageWidth: -1
+    Word: false
+System:
+    Allow_Ext: [jpg, jpeg, png, bmp]
+    GPU: false
+    GPU_ID: 0
+    Path: /root/code/ip_manager/server/captcha_data
+    Project: aws_cap
+    Val: 0.03
+Train:
+    BATCH_SIZE: 32
+    CNN: {NAME: ddddocr}
+    DROPOUT: 0.3
+    LR: 0.01
+    OPTIMIZER: SGD
+    SAVE_CHECKPOINTS_STEP: 2000
+    TARGET: {Accuracy: 0.97, Cost: 0.05, Epoch: 20}
+    TEST_BATCH_SIZE: 32
+    TEST_STEP: 1000
